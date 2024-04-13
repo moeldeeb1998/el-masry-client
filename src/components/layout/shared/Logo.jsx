@@ -10,15 +10,16 @@ import Link from 'next/link'
 // Third-party Imports
 import styled from '@emotion/styled'
 
-// Component Imports
-import VuexyLogo from '@core/svg/Logo'
-
 // Config Imports
 import themeConfig from '@configs/themeConfig'
 
 // Hook Imports
 import useVerticalNav from '@menu/hooks/useVerticalNav'
 import { useSettings } from '@core/hooks/useSettings'
+
+// Images
+const logoSrc = '/images/logos/icon/Icon-09.png'
+
 
 const LogoText = styled.span`
   font-size: 1.375rem;
@@ -63,7 +64,7 @@ const Logo = () => {
   // return <Img src='/next.svg' width={100} height={25} alt='logo' /> // for example
   return (
     <Link href='/' className='flex items-center'>
-      <VuexyLogo className='text-2xl text-primary' />
+      <img className='text-2xl text-primary' src={logoSrc} width={35} />
       <LogoText
         ref={logoTextRef}
         isHovered={isHovered}
